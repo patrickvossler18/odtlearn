@@ -174,10 +174,14 @@
 <li class="toctree-l4"><a class="reference internal" href="../../autoapi/odtlearn/utils/binarize/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">odtlearn.utils.binarize</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../autoapi/odtlearn/utils/callback_helpers/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">odtlearn.utils.callback_helpers</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../autoapi/odtlearn/utils/callbacks/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">odtlearn.utils.callbacks</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../autoapi/odtlearn/utils/cbc_solver/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">odtlearn.utils.cbc_solver</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../autoapi/odtlearn/utils/gb_solver/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">odtlearn.utils.gb_solver</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../autoapi/odtlearn/utils/scip_solver/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">odtlearn.utils.scip_solver</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../autoapi/odtlearn/utils/solver/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">odtlearn.utils.solver</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../autoapi/odtlearn/utils/validation/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">odtlearn.utils.validation</span></code></a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="../../autoapi/odtlearn/constants/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">odtlearn.constants</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../autoapi/odtlearn/datasets/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">odtlearn.datasets</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../autoapi/odtlearn/fair_oct/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">odtlearn.fair_oct</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../autoapi/odtlearn/flow_oct/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">odtlearn.flow_oct</span></code></a></li>
@@ -251,12 +255,13 @@
 <div class="viewcode-block" id="OptimalClassificationTree"><a class="viewcode-back" href="../../autoapi/odtlearn/opt_ct/index.html#odtlearn.opt_ct.OptimalClassificationTree">[docs]</a><span class="k">class</span> <span class="nc">OptimalClassificationTree</span><span class="p">(</span><span class="n">OptimalDecisionTree</span><span class="p">):</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
+        <span class="n">solver</span><span class="p">,</span>
         <span class="n">depth</span><span class="p">,</span>
         <span class="n">time_limit</span><span class="p">,</span>
         <span class="n">num_threads</span><span class="p">,</span>
         <span class="n">verbose</span><span class="p">,</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">depth</span><span class="p">,</span> <span class="n">time_limit</span><span class="p">,</span> <span class="n">num_threads</span><span class="p">,</span> <span class="n">verbose</span><span class="p">)</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">solver</span><span class="p">,</span> <span class="n">depth</span><span class="p">,</span> <span class="n">time_limit</span><span class="p">,</span> <span class="n">num_threads</span><span class="p">,</span> <span class="n">verbose</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">_extract_metadata</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
         <span class="sd">"""A function for extracting metadata from the inputs before converting</span>
